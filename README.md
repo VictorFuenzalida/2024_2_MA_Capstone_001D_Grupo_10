@@ -1,2 +1,2 @@
-# Capstone_2024_Araya_Fuenzalida
+# 2024_2_PO_Capstone_001D_Grupo_10
 Capstone 2024
