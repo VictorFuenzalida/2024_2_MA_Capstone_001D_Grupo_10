@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--fondo-pagina);
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    background-color: var(--fondo-banner);
+    color: var(--color-texto-banner);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Contenedor del catálogo */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    gap: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0; /* Sin padding en pantallas grandes */
+}
+/* Tarjeta de producto */
+.product-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 175px; /* Reduce la altura mínima a la mitad */
+    padding: 10px; /* Reduce el padding interno de la tarjeta */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen del producto */
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Información del producto */
+.product-info {
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Descuento */
+.discount {
+    font-size: 12px; /* Reduce el tamaño de fuente */
+    color: #ff6b6b;
+    text-decoration: line-through;
+    margin: 0;
+}
+
+.discount span {
+    color: #28a745;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+/* Puntos */
+.points {
+    font-size: 18px; /* Reduce el tamaño de fuente */
+    color: #333;
+    font-weight: bold;
+    margin: 8px 0 4px;
+}
+
+/* Descripción */
+.description {
+    font-size: 12px; /* Reduce el tamaño de fuente */
+    color: #666;
+    margin-top: auto;
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+    .catalog {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+        padding: 0 20px; /* Añade padding horizontal en tabletas */
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        padding: 0 15px; /* Añade más padding horizontal en pantallas pequeñas */
+    }
+
+    /* Aplica margen alrededor de las imágenes en pantallas pequeñas */
+    .product-image img {
+        margin: 8px;
+    }
+
+    .product-info {
+        padding: 4px;
+    }
+    
+}
+
+
+@media (max-width: 480px) {
+
+    /* Banner en móvil */
+    .banner {
+        font-size: 24px;
+        padding: 15px 0;
+    }
+}

@@ -1,0 +1,373 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--fondo-pagina);
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    background-color: var(--fondo-banner);
+    color: var(--color-texto-banner);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+/* Sección de texto */
+.text-section {
+    width: 60%;
+    color: var(--color-texto-principal);
+}
+
+.text-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Sección de imágenes */
+.image-gallery {
+    width: 35%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsividad para tablets y móviles */
+@media (max-width: 768px) {
+    
+
+    /* Contenedor principal en columna */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    /* Sección de texto para tablets */
+    .text-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-section h2 {
+        font-size: 28px;
+    }
+
+    .text-section p {
+        font-size: 16px;
+    }
+
+    /* Galería de imágenes en dos columnas */
+    .image-gallery {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    .image-gallery img {
+        height: 200px;
+    }
+}
+
+/* Responsividad para móviles pequeños */
+@media (max-width: 480px) {
+
+    /* Banner en móvil */
+    .banner {
+        font-size: 24px;
+        padding: 15px 0;
+    }
+
+    /* Texto de la sección principal */
+    .text-section h2 {
+        font-size: 24px;
+    }
+
+    .text-section p {
+        font-size: 14px;
+    }
+
+    /* Galería en una columna para móviles */
+    .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .image-gallery img {
+        height: 150px;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--fondo-pagina);
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    background-color: var(--fondo-banner);
+    color: var(--color-texto-banner);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+/* Sección de texto */
+.text-section {
+    width: 60%;
+    color: var(--color-texto-principal);
+}
+
+.text-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Sección de imágenes */
+.image-gallery {
+    width: 35%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsividad para tablets y móviles */
+@media (max-width: 768px) {
+    
+
+    /* Contenedor principal en columna */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    /* Sección de texto para tablets */
+    .text-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-section h2 {
+        font-size: 28px;
+    }
+
+    .text-section p {
+        font-size: 16px;
+    }
+
+    /* Galería de imágenes en dos columnas */
+    .image-gallery {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    .image-gallery img {
+        height: 200px;
+    }
+}
+
+/* Responsividad para móviles pequeños */
+@media (max-width: 480px) {
+
+    /* Banner en móvil */
+    .banner {
+        font-size: 24px;
+        padding: 15px 0;
+    }
+
+    /* Texto de la sección principal */
+    .text-section h2 {
+        font-size: 24px;
+    }
+
+    .text-section p {
+        font-size: 14px;
+    }
+
+    /* Galería en una columna para móviles */
+    .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .image-gallery img {
+        height: 150px;
+    }
+}
+
+/* Mapa */
+/* Contenedor principal de la sección */
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center; /* Centra el contenido de la sección */
+}
+
+/* Contenedor de imágenes */
+.header-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0; /* Reduce el espacio entre las imágenes */
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px 0;
+}
+
+/* Cada contenedor de imagen */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 95%; /* Cada imagen ocupa el 25% del ancho del contenedor en pantallas grandes */
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Sección del mapa */
+.map-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Contenedor del mapa */
+.map-container {
+    flex: 1;
+    max-width: 60%;
+    border: 2px solid #d1c0ad;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Información de dirección */
+.address-info {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: justify; /* Justifica todo el texto dentro del contenedor */
+}
+
+.address-info h3 {
+    color: #0f2e20;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left; /* Mantiene el título alineado a la izquierda */
+}
+
+.address-info p {
+    color: #6d6d6d;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify; /* Justifica el texto de los párrafos */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .map-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-container,
+    .address-info {
+        max-width: 100%;
+    }
+
+    /* Imagen a tamaño completo en pantallas pequeñas */
+    .header-image img {
+        width: 80%; /* Ajusta el ancho de la imagen en pantallas pequeñas */
+    }
+
+    .header-images {
+        flex-direction: column; /* Apila las imágenes verticalmente */
+        gap: 10px; /* Espacio reducido entre las imágenes */
+    }
+    .address-info {
+        max-width: 100%;
+        text-align: justify; /* Justificación en pantallas pequeñas también */
+        padding: 15px;
+    }
+}

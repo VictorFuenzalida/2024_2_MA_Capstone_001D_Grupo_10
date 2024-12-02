@@ -1,0 +1,194 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6e9d9; /* Color de fondo para toda la página */
+    color: #0f2e20;
+    margin: 0;
+}
+
+
+/* Contenedor del formulario */
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--fondo-pagina);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Estilo de los campos de entrada */
+form label {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--color-texto-principal);
+    border-radius: 4px;
+    background-color: var(--fondo-pagina);
+    color: var(--color-texto-principal);
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-texto-principal);
+    box-shadow: 0 0 5px rgba(15, 46, 32, 0.3);
+}
+
+/* Estilo de la casilla de verificación */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--color-texto-principal);
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Estilo de la sección de captcha */
+.captcha-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.captcha-container img {
+    width: 100px;
+    height: 40px;
+    border: 1px solid var(--color-texto-principal);
+    border-radius: 4px;
+}
+
+.captcha-refresh {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--color-texto-principal);
+    cursor: pointer;
+}
+
+.captcha-container input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid var(--color-texto-principal);
+    border-radius: 4px;
+    background-color: var(--fondo-pagina);
+    color: var(--color-texto-principal);
+}
+
+/* Botón de envío */
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: var(--color-fondo-botón);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--color-hover-botón);
+}
+
+/* Estilos para mensajes de error */
+.error-messages {
+    background-color: #ffdddd;
+    color: #a94442;
+    padding: 10px;
+    border: 1px solid #a94442;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.error {
+    margin: 0;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    .captcha-container input[type="text"] {
+        font-size: 14px;
+    }
+
+    .submit-button {
+        font-size: 14px;
+    }
+
+    .captcha-container {
+        gap: 5px;
+    }
+}
+
+/* Contenedor principal para la imagen y el formulario */
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo de la imagen al lado izquierdo */
+.contact-image img {
+    width: 400px; /* Ancho aumentado para hacer la imagen más grande */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor del formulario */
+.form-container {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--fondo-pagina, #f6e9d9);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+/* Responsividad: coloca la imagen sobre el formulario en pantallas pequeñas */
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-image img {
+        width: 100%; /* La imagen ocupa el ancho completo en pantallas pequeñas */
+        max-width: 600px; /* Limita el tamaño en pantallas pequeñas */
+    }
+}

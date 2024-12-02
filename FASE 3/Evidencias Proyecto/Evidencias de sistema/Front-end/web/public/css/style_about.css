@@ -1,0 +1,123 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--fondo-pagina);
+}
+
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+/* Sección de texto */
+
+
+.text-section {
+    width: 60%;
+    color: var(--color-texto-principal);
+}
+
+.text-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Sección de imágenes */
+.image-gallery {
+    width: 35%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsividad para tablets y móviles */
+@media (max-width: 768px) {
+    
+
+    /* Contenedor principal en columna */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    /* Sección de texto para tablets */
+    .text-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-section h2 {
+        font-size: 28px;
+    }
+
+    .text-section p {
+        font-size: 16px;
+    }
+
+    /* Galería de imágenes en dos columnas */
+    .image-gallery {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    .image-gallery img {
+        height: 200px;
+    }
+}
+
+/* Responsividad para móviles pequeños */
+@media (max-width: 480px) {
+
+    /* Texto de la sección principal */
+    .text-section h2 {
+        font-size: 24px;
+    }
+
+    .text-section p {
+        font-size: 14px;
+    }
+
+    /* Galería en una columna para móviles */
+    .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .image-gallery img {
+        height: 150px;
+    }
+}
